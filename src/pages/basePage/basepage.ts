@@ -25,7 +25,8 @@ export default class BasePage{
     }
     async navitatetoURL ( Link:string)
     {
-        await this.page.goto(Link, {timeout: 3000, 'waitUntil':'load'});
+        
+        await this.page.goto(Link);
         await this.page.waitForLoadState('domcontentloaded',{timeout:2000})
     }
     async waitForTheseSeconds (seconds:number)
